@@ -9,7 +9,7 @@ document.getElementById('test-button').addEventListener('click', function(){
   const titleClickHandler = function(event){
     console.log('Link was clicked!');
   
-    /* remove class 'active' from all article links  */
+    /* [DONE] remove class 'active' from all article links  */
 
     const activeLinks = document.querySelectorAll('.titles a.active');
 
@@ -18,15 +18,18 @@ document.getElementById('test-button').addEventListener('click', function(){
     }
   
     /* add class 'active' to the clicked link */
-    
+    const clickedElement = this;
+    console.log('clickedElement:', clickedElement);
+    clickedElement.classList.add('active');
+
+    /* [DONE] remove class 'active' from all articles */
+  
     const activeArticles = document.querySelectorAll('.posts article.active');
 
     for(let activeArticle of activeArticles){
         activeArticle.classList.remove('active');
     }
 
-    /* remove class 'active' from all articles */
-  
     /* get 'href' attribute from the clicked link */
   
     /* find the correct article using the selector (value of 'href' attribute) */
