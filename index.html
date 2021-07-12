@@ -190,6 +190,27 @@
           </main>
         </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+      <script id="template-article-link" type="text/x-handlebars-template">
+        <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+        <!--<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>-->
+      </script>
+      <script id="template-article-tagss" type="text/x-handlebars-template">
+        <li><a href="#tag-{{ tag }}"><span>{{ tag }}</span></a>&nbsp;</li>
+      </script>
+      <script id="template-article-author" type="text/x-handlebars-template">
+        <a href="#author-{{ articleAuhors }}"><span>{{ articleAuhors }}</span></a>
+      </script>
+      <script id="template-article-tag-cloud" type="text/x-handlebars-template">
+        {{#each tags}}
+        <a href="#tag-{{ tag }}" class="{{ className }}"> {{ tag }}</a>                 
+        {{/each}}
+      </script>
+      <script id="template-article-author-right" type="text/x-handlebars-template">
+        {{#each authors}}
+        <li>{{{author}}}</li>
+        {{/each}}
+      </script>
       <script src="js/script.js"></script>
   </body>
 </html>

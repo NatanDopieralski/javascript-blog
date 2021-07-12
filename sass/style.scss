@@ -138,9 +138,10 @@ body {
 }
 .tag-size-5 {
   font-size: 26px;
-  color: yellow;
+  color: orange;
 }
-a[class^="tag-size"] {
+a[class^="tag-"] {
   display: inline;
+  padding: 3px;
 }
 
